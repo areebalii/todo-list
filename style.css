@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(72, 163, 0, 0.07);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+main {
+  padding: 0 16px 32px;
+}
+
+.title {
+  font-size: 64px;
+  color: #48a300;
+  text-align: center;
+}
+.title span {
+  color: rgb(84, 2, 82);
+}
+.appContainer {
+  background-color: #fbfbfb;
+  max-width: 660px;
+  margin-inline: auto;
+  border-radius: 15px;
+  padding: 32px 48px;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.3);
+}
+.progressLabel {
+  font-size: 14px;
+  color: #858585;
+  margin-bottom: 20px;
+}
+.progressBar {
+  position: relative;
+  height: 30px;
+  background-color: rgba(72, 163, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 42px;
+}
+.progressValue {
+  height: 30px;
+  color: white;
+  background-color: green;
+  border-radius: 15px;
+  margin-bottom: 42px;
+  width: 33%;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  /* visibility: hidden; */
+  width: 0;
+  overflow: hidden;
+  transition: .3s linear;
+}
+.progressValue span{
+    padding-left: 20px;
+    min-width: max-content;
+}
+.errorLabel {
+  position: absolute;
+  top: 23px;
+  color: #ff5151;
+  font-size: 14px;
+  margin-block: 20px;
+  display: none;
+}
+.showError .errorLabel {
+  display: block;
+}
+.goalContainer {
+  border: 1px solid #c3c3c3;
+  border-radius: 17px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  margin-bottom: 45px;
+}
+.customCheckBox {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.goalInput {
+  outline: none;
+  border: none;
+  margin-left: 22px;
+  flex-grow: 1;
+  align-self: stretch;
+  width: 100%;
+}
+.quote {
+  font-weight: 500;
+  text-align: center;
+}
+.completed .customCheckBox {
+  background-color: #48a300;
+  border-color: #48a300;
+}
+.completed .goalInput {
+  color: #48a300;
+  text-decoration: line-through;
+}
+
+@media (max-width: 732px) {
+  .title {
+    font-size: 32px;
+  }
+  .appContainer {
+    padding: 16px 32px;
+  }
+  .goalContainer {
+    height: 64px;
+    margin-bottom: 28px;
+    border-radius: 12px;
+  }
+  .customCheckBox {
+    height: 20px;
+    width: 20px;
+  }
+}
